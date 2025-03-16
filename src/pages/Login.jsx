@@ -4,6 +4,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { useModal } from '../context/modal';
 import { useUser } from "../context/user";
 
+import axios from 'axios';
+
 import Modal from '../components/Modal';
 
 const Login = () => {
@@ -19,6 +21,8 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       setLoading(true);
+
+
       await login(email, password);
       navigate("/");
     } catch (error) {

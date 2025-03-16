@@ -72,7 +72,7 @@ const Settings = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-800">
-      <Navbar />
+      {/*<Navbar />*/}
       <div className="pb-16 p-4 max-w-xl mx-auto w-full bg-gray-800">
         
         <div>

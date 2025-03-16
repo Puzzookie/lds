@@ -3,10 +3,16 @@ import { useParams } from 'react-router-dom';
 import { useUser } from "../context/user";
 import Account from "./Account.jsx";
 import Profile from "./Profile.jsx";
+import Loading from "../pages/Loading.jsx"
 
 const ProfileAccount = () => {
-  const { user } = useUser();
+  const { userLoading, user } = useUser();
   const { profile } = useParams();
+
+  if(userLoading)
+  {
+      return <Loading />;
+  }
 
   if (user.$id === profile) 
   {
